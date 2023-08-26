@@ -1,0 +1,11 @@
+{
+  "name": "@nocobase/plugin-dumu-lexical",
+  "version": "0.12.0-alpha.4",
+  "main": "dist/server/index.js",
+  "dependencies": {},
+  "peerDependencies": {
+    "@nocobase/client": "0.x",
+    "@nocobase/server": "0.x",
+    "@nocobase/test": "0.x"
+  }
+}
