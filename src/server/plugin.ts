@@ -1,9 +1,14 @@
 import { InstallOptions, Plugin } from '@nocobase/server';
+import { WangEditorField } from './wang-editor-field';
 
-export class DumuLexicalPlugin extends Plugin {
+export class DumuLexicalFieldPlugin extends Plugin {
   afterAdd() {}
 
-  beforeLoad() {}
+  beforeLoad() {
+    this.db.registerFieldTypes({
+      lexical: WangEditorField,
+    });
+  }
 
   async load() {}
 
@@ -16,4 +21,4 @@ export class DumuLexicalPlugin extends Plugin {
   async remove() {}
 }
 
-export default DumuLexicalPlugin;
+export default DumuLexicalFieldPlugin;
