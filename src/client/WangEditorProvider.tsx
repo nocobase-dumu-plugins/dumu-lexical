@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { CollectionManagerProvider, ReadPretty, registerField, SchemaComponentOptions } from '@nocobase/client';
+import {
+  CollectionManagerProvider,
+  ReadPretty,
+  registerField,
+  SchemaComponentOptions,
+  useAPIClient,
+} from '@nocobase/client';
 import { connect, mapProps, mapReadPretty } from '@formily/react';
 import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor';
 import { Editor, Toolbar } from '@wangeditor/editor-for-react';
@@ -15,8 +21,27 @@ const WangEditorCom = connect(
     }
     const [editor, setEditor] = useState<IDomEditor | null>(null);
     const toolbarConfig: Partial<IToolbarConfig> = {};
+    const api = useAPIClient();
+    const customUpload = async (file: File, insertFn: (url: string, alt?: string, href?: string) => void) => {
+      const data = new FormData();
+      data.append('file', file);
+      const r = await api.request({
+        url: 'attachments:create',
+        method: 'post',
+        data,
+      });
+      insertFn(r.data.data.url);
+    };
     const editorConfig: Partial<IEditorConfig> = {
       placeholder: '请输入内容...',
+      MENU_CONF: {
+        uploadImage: {
+          customUpload,
+        },
+        uploadVideo: {
+          customUpload,
+        },
+      },
     };
 
     useEffect(() => {
