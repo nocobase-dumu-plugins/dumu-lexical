@@ -20,9 +20,9 @@ const WangEditorCom = connect(
       return <ReadPretty.Html {...props} />;
     }
     const [editor, setEditor] = useState<IDomEditor | null>(null);
-    const toolbarConfig: Partial<IToolbarConfig> = {};
+    const toolbarConfig= {};
     const api = useAPIClient();
-    const customUpload = async (file: File, insertFn: (url: string, alt?: string, href?: string) => void) => {
+    const customUpload = async (file, insertFn) => {
       const data = new FormData();
       data.append('file', file);
       const r = await api.request({
@@ -32,7 +32,7 @@ const WangEditorCom = connect(
       });
       insertFn(r.data.data.url);
     };
-    const editorConfig: Partial<IEditorConfig> = {
+    const editorConfig = {
       placeholder: '请输入内容...',
       MENU_CONF: {
         uploadImage: {
@@ -56,7 +56,7 @@ const WangEditorCom = connect(
     setTimeout(() => {
       canSave = true;
     }, 800);
-    const myChange = (editor: IDomEditor) => {
+    const myChange = (editor) => {
       const html = editor.getHtml();
       canSave && onChange(html);
     };
