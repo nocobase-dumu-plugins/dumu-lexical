@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import {
   CollectionManagerProvider,
   ReadPretty,
-  registerField,
   SchemaComponentOptions,
+  registerField,
   useAPIClient,
 } from '@nocobase/client';
 import { connect, mapProps, mapReadPretty } from '@formily/react';
@@ -94,7 +94,7 @@ const WangEditorCom = connect(
 );
 
 registerField(WangEditor.group, WangEditor.type, WangEditor);
-export const WangEditorProvider = React.memo((props) => {
+export const WangEditorProvider = (props) => {
   return (
     <CollectionManagerProvider interfaces={{ WangEditor }}>
       <SchemaComponentOptions
@@ -104,10 +104,8 @@ export const WangEditorProvider = React.memo((props) => {
       >
         {props.children}
       </SchemaComponentOptions>
-
-      {/*{props.children}*/}
     </CollectionManagerProvider>
   );
-});
+};
 
 WangEditorProvider.displayName = 'WangEditorProvider';

@@ -15,7 +15,15 @@
   typeof exports === "object" && typeof module !== "undefined" ? factory(exports, require("@nocobase/client"), require("react"), require("@formily/react")) : typeof define === "function" && define.amd ? define(["exports", "@nocobase/client", "react", "@formily/react"], factory) : (global2 = typeof globalThis !== "undefined" ? globalThis : global2 || self, factory(global2["@nocobase/plugin-dumu-wangeditor-field"] = {}, global2["@nocobase/client"], global2.react, global2["@formily/react"]));
 })(this, function(exports2, client, e$1, react) {
   "use strict";
-  var jsxRuntime = { exports: {} };
+  var jsxRuntimeExports = {};
+  var jsxRuntime = {
+    get exports() {
+      return jsxRuntimeExports;
+    },
+    set exports(v10) {
+      jsxRuntimeExports = v10;
+    }
+  };
   var reactJsxRuntime_production_min = {};
   /**
    * @license React
@@ -42,10 +50,11 @@
   reactJsxRuntime_production_min.Fragment = l$1;
   reactJsxRuntime_production_min.jsx = q$1;
   reactJsxRuntime_production_min.jsxs = q$1;
-  {
-    jsxRuntime.exports = reactJsxRuntime_production_min;
-  }
-  var jsxRuntimeExports = jsxRuntime.exports;
+  (function(module2) {
+    {
+      module2.exports = reactJsxRuntime_production_min;
+    }
+  })(jsxRuntime);
   var e = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {};
   function t(e10) {
     return e10 && e10.__esModule && Object.prototype.hasOwnProperty.call(e10, "default") ? e10.default : e10;
@@ -468,8 +477,8 @@
         throw Fn("Incompatible receiver, " + e10 + " required");
       return n10;
     };
-  } }, $n = Function.prototype, Hn = b && Object.getOwnPropertyDescriptor, Vn = ce($n, "name"), Un = { EXISTS: Vn, PROPER: Vn && "something" === (function() {
-  }).name, CONFIGURABLE: Vn && (!b || b && Hn($n, "name").configurable) }, Wn = function(e10, t10, n10, r10) {
+  } }, $n = Function.prototype, Hn = b && Object.getOwnPropertyDescriptor, Vn = ce($n, "name"), Un = { EXISTS: Vn, PROPER: Vn && "something" === function() {
+  }.name, CONFIGURABLE: Vn && (!b || b && Hn($n, "name").configurable) }, Wn = function(e10, t10, n10, r10) {
     r10 && r10.enumerable ? e10[t10] = n10 : qe(e10, t10, n10);
   }, Gn = be("iterator"), qn = false;
   [].keys && ("next" in (Mn = [].keys()) ? (Rn = rt(rt(Mn))) !== Object.prototype && (Ln = Rn) : qn = true);
@@ -731,8 +740,8 @@
         throw li("Incompatible receiver, " + e10 + " required");
       return n10;
     };
-  } }, yi = Function.prototype, mi = Or && Object.getOwnPropertyDescriptor, bi = xo(yi, "name"), wi = { EXISTS: bi, PROPER: bi && "something" === (function() {
-  }).name, CONFIGURABLE: bi && (!Or || Or && mi(yi, "name").configurable) }, Ei = n(function(e10) {
+  } }, yi = Function.prototype, mi = Or && Object.getOwnPropertyDescriptor, bi = xo(yi, "name"), wi = { EXISTS: bi, PROPER: bi && "something" === function() {
+  }.name, CONFIGURABLE: bi && (!Or || Or && mi(yi, "name").configurable) }, Ei = n(function(e10) {
     var t10 = wi.CONFIGURABLE, n10 = vi.get, r10 = vi.enforce, o10 = String(String).split("String");
     (e10.exports = function(e11, n11, i10, a10) {
       var u10, s10 = !!a10 && !!a10.unsafe, l10 = !!a10 && !!a10.enumerable, c10 = !!a10 && !!a10.noTargetGet, f10 = a10 && void 0 !== a10.name ? a10.name : n11;
@@ -7224,8 +7233,8 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
         throw _E("Incompatible receiver, " + e10 + " required");
       return n10;
     };
-  } }, zE = Function.prototype, $E = Kw && Object.getOwnPropertyDescriptor, HE = xw(zE, "name"), VE = { EXISTS: HE, PROPER: HE && "something" === (function() {
-  }).name, CONFIGURABLE: HE && (!Kw || Kw && $E(zE, "name").configurable) }, UE = iw(function(e10) {
+  } }, zE = Function.prototype, $E = Kw && Object.getOwnPropertyDescriptor, HE = xw(zE, "name"), VE = { EXISTS: HE, PROPER: HE && "something" === function() {
+  }.name, CONFIGURABLE: HE && (!Kw || Kw && $E(zE, "name").configurable) }, UE = iw(function(e10) {
     var t10 = VE.CONFIGURABLE, n10 = ME.get, r10 = ME.enforce, o10 = String(String).split("String");
     (e10.exports = function(e11, n11, i10, a10) {
       var u10, s10 = !!a10 && !!a10.unsafe, l10 = !!a10 && !!a10.enumerable, c10 = !!a10 && !!a10.noTargetGet, f10 = a10 && void 0 !== a10.name ? a10.name : n11;
@@ -12427,8 +12436,8 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
         throw YN("Incompatible receiver, " + e10 + " required");
       return n10;
     };
-  } }, rI = Function.prototype, oI = yj && Object.getOwnPropertyDescriptor, iI = pN(rI, "name"), aI = { EXISTS: iI, PROPER: iI && "something" === (function() {
-  }).name, CONFIGURABLE: iI && (!yj || yj && oI(rI, "name").configurable) }, uI = fj(function(e10) {
+  } }, rI = Function.prototype, oI = yj && Object.getOwnPropertyDescriptor, iI = pN(rI, "name"), aI = { EXISTS: iI, PROPER: iI && "something" === function() {
+  }.name, CONFIGURABLE: iI && (!yj || yj && oI(rI, "name").configurable) }, uI = fj(function(e10) {
     var t10 = aI.CONFIGURABLE, n10 = nI.get, r10 = nI.enforce, o10 = String(String).split("String");
     (e10.exports = function(e11, n11, i10, a10) {
       var u10, s10 = !!a10 && !!a10.unsafe, l10 = !!a10 && !!a10.enumerable, c10 = !!a10 && !!a10.noTargetGet, f10 = a10 && void 0 !== a10.name ? a10.name : n11;
@@ -14763,8 +14772,8 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
     });
   }
   OW(GW, "Symbol"), GU[$W] = true, SW("asyncIterator"), SW("hasInstance"), SW("isConcatSpreadable"), SW("iterator"), SW("match"), SW("matchAll"), SW("replace"), SW("search"), SW("species"), SW("split"), SW("toPrimitive"), SW("toStringTag"), SW("unscopables"), OW(EH.JSON, "JSON", true);
-  var mG, bG, wG, EG = JH.Symbol, DG = {}, SG = Function.prototype, xG = jH && Object.getOwnPropertyDescriptor, CG = DV(SG, "name"), AG = { EXISTS: CG, PROPER: CG && "something" === (function() {
-  }).name, CONFIGURABLE: CG && (!jH || jH && xG(SG, "name").configurable) }, OG = !PH(function() {
+  var mG, bG, wG, EG = JH.Symbol, DG = {}, SG = Function.prototype, xG = jH && Object.getOwnPropertyDescriptor, CG = DV(SG, "name"), AG = { EXISTS: CG, PROPER: CG && "something" === function() {
+  }.name, CONFIGURABLE: CG && (!jH || jH && xG(SG, "name").configurable) }, OG = !PH(function() {
     function e10() {
     }
     return e10.prototype.constructor = null, Object.getPrototypeOf(new e10()) !== e10.prototype;
@@ -15672,8 +15681,8 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
       }
     if (xK(e10, t10))
       return nX(!nY(yX.f, e10, t10), e10[t10]);
-  } }, wX = Function.prototype, EX = XK && Object.getOwnPropertyDescriptor, DX = xK(wX, "name"), SX = { EXISTS: DX, PROPER: DX && "something" === (function() {
-  }).name, CONFIGURABLE: DX && (!XK || XK && EX(wX, "name").configurable) }, xX = Zq(function(e10) {
+  } }, wX = Function.prototype, EX = XK && Object.getOwnPropertyDescriptor, DX = xK(wX, "name"), SX = { EXISTS: DX, PROPER: DX && "something" === function() {
+  }.name, CONFIGURABLE: DX && (!XK || XK && EX(wX, "name").configurable) }, xX = Zq(function(e10) {
     var t10 = SX.CONFIGURABLE, n10 = hX.get, r10 = hX.enforce, o10 = String(String).split("String");
     (e10.exports = function(e11, n11, i10, a10) {
       var u10, s10 = !!a10 && !!a10.unsafe, l10 = !!a10 && !!a10.enumerable, c10 = !!a10 && !!a10.noTargetGet, f10 = a10 && void 0 !== a10.name ? a10.name : n11;
@@ -17251,8 +17260,8 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
         throw t2("Incompatible receiver, " + e10 + " required");
       return n10;
     };
-  } }, l2 = Function.prototype, c2 = x0 && Object.getOwnPropertyDescriptor, f2 = b1(l2, "name"), d2 = { EXISTS: f2, PROPER: f2 && "something" === (function() {
-  }).name, CONFIGURABLE: f2 && (!x0 || x0 && c2(l2, "name").configurable) }, p2 = m0(function(e10) {
+  } }, l2 = Function.prototype, c2 = x0 && Object.getOwnPropertyDescriptor, f2 = b1(l2, "name"), d2 = { EXISTS: f2, PROPER: f2 && "something" === function() {
+  }.name, CONFIGURABLE: f2 && (!x0 || x0 && c2(l2, "name").configurable) }, p2 = m0(function(e10) {
     var t10 = d2.CONFIGURABLE, n10 = s2.get, r10 = s2.enforce, o10 = String(String).split("String");
     (e10.exports = function(e11, n11, i10, a10) {
       var u10, s10 = !!a10 && !!a10.unsafe, l10 = !!a10 && !!a10.enumerable, c10 = !!a10 && !!a10.noTargetGet, f10 = a10 && void 0 !== a10.name ? a10.name : n11;
@@ -18569,8 +18578,8 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
         throw H8("Incompatible receiver, " + e10 + " required");
       return n10;
     };
-  } }, X8 = Function.prototype, Z8 = f5 && Object.getOwnPropertyDescriptor, J8 = a8(X8, "name"), Q8 = { EXISTS: J8, PROPER: J8 && "something" === (function() {
-  }).name, CONFIGURABLE: J8 && (!f5 || f5 && Z8(X8, "name").configurable) }, e7 = i5(function(e10) {
+  } }, X8 = Function.prototype, Z8 = f5 && Object.getOwnPropertyDescriptor, J8 = a8(X8, "name"), Q8 = { EXISTS: J8, PROPER: J8 && "something" === function() {
+  }.name, CONFIGURABLE: J8 && (!f5 || f5 && Z8(X8, "name").configurable) }, e7 = i5(function(e10) {
     var t10 = Q8.CONFIGURABLE, n10 = Y8.get, r10 = Y8.enforce, o10 = String(String).split("String");
     (e10.exports = function(e11, n11, i10, a10) {
       var u10, s10 = !!a10 && !!a10.unsafe, l10 = !!a10 && !!a10.enumerable, c10 = !!a10 && !!a10.noTargetGet, f10 = a10 && void 0 !== a10.name ? a10.name : n11;
@@ -20067,8 +20076,8 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
         throw uae("Incompatible receiver, " + e10 + " required");
       return n10;
     };
-  } }, gae = Function.prototype, vae = Foe && Object.getOwnPropertyDescriptor, yae = Cie(gae, "name"), mae = { EXISTS: yae, PROPER: yae && "something" === (function() {
-  }).name, CONFIGURABLE: yae && (!Foe || Foe && vae(gae, "name").configurable) }, bae = xoe(function(e10) {
+  } }, gae = Function.prototype, vae = Foe && Object.getOwnPropertyDescriptor, yae = Cie(gae, "name"), mae = { EXISTS: yae, PROPER: yae && "something" === function() {
+  }.name, CONFIGURABLE: yae && (!Foe || Foe && vae(gae, "name").configurable) }, bae = xoe(function(e10) {
     var t10 = mae.CONFIGURABLE, n10 = hae.get, r10 = hae.enforce, o10 = String(String).split("String");
     (e10.exports = function(e11, n11, i10, a10) {
       var u10, s10 = !!a10 && !!a10.unsafe, l10 = !!a10 && !!a10.enumerable, c10 = !!a10 && !!a10.noTargetGet, f10 = a10 && void 0 !== a10.name ? a10.name : n11;
@@ -21550,8 +21559,8 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
         throw Ype("Incompatible receiver, " + e10 + " required");
       return n10;
     };
-  } }, rhe = Function.prototype, ohe = fpe && Object.getOwnPropertyDescriptor, ihe = $de(rhe, "name"), ahe = { EXISTS: ihe, PROPER: ihe && "something" === (function() {
-  }).name, CONFIGURABLE: ihe && (!fpe || fpe && ohe(rhe, "name").configurable) }, uhe = Dde(function(e10) {
+  } }, rhe = Function.prototype, ohe = fpe && Object.getOwnPropertyDescriptor, ihe = $de(rhe, "name"), ahe = { EXISTS: ihe, PROPER: ihe && "something" === function() {
+  }.name, CONFIGURABLE: ihe && (!fpe || fpe && ohe(rhe, "name").configurable) }, uhe = Dde(function(e10) {
     var t10 = ahe.CONFIGURABLE, n10 = nhe.get, r10 = nhe.enforce, o10 = String(String).split("String");
     (e10.exports = function(e11, n11, i10, a10) {
       var u10, s10 = !!a10 && !!a10.unsafe, l10 = !!a10 && !!a10.enumerable, c10 = !!a10 && !!a10.noTargetGet, f10 = a10 && void 0 !== a10.name ? a10.name : n11;
@@ -22863,7 +22872,7 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
     })
   );
   client.registerField(WangEditor.group, WangEditor.type, WangEditor);
-  const WangEditorProvider = e$1.memo((props) => {
+  const WangEditorProvider = (props) => {
     return /* @__PURE__ */ jsxRuntimeExports.jsx(client.CollectionManagerProvider, { interfaces: { WangEditor }, children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       client.SchemaComponentOptions,
       {
@@ -22873,7 +22882,7 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
         children: props.children
       }
     ) });
-  });
+  };
   WangEditorProvider.displayName = "WangEditorProvider";
   class DumuWangEditorFieldPlugin extends client.Plugin {
     async afterAdd() {
