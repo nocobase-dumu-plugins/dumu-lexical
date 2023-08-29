@@ -18,7 +18,7 @@ const WangEditorCom = connect(
     if (disabled) {
       return <ReadPretty.Html {...props} />;
     }
-    const [editor, setEditor] = useState<IDomEditor | null>(null);
+    const [editor, setEditor] = useState(null);
     const toolbarConfig= {};
     const api = useAPIClient();
     const customUpload = async (file, insertFn) => {
