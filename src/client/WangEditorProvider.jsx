@@ -7,7 +7,6 @@ import {
   useAPIClient,
 } from '@nocobase/client';
 import { connect, mapProps, mapReadPretty } from '@formily/react';
-import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor';
 import { Editor, Toolbar } from '@wangeditor/editor-for-react';
 
 import '@wangeditor/editor/dist/css/style.css';

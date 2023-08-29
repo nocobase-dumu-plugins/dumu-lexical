@@ -22797,7 +22797,7 @@ Uppy plugins must have unique \`id\` options. See https://uppy.io/docs/plugins/#
       if (disabled) {
         return /* @__PURE__ */ jsxRuntimeExports.jsx(client.ReadPretty.Html, { ...props });
       }
-      const [editor, setEditor] = e$1.useState(null);
+      const [editor, setEditor] = e$1.useState < IDomEditor | null > null;
       const toolbarConfig = {};
       const api = client.useAPIClient();
       const customUpload = async (file, insertFn) => {
