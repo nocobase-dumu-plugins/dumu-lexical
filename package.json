@@ -13,5 +13,31 @@
     "@nocobase/database": "0.x",
     "@nocobase/server": "0.x",
     "@nocobase/test": "0.x"
+  },
+  "types": "./dist/server/index.d.ts",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "directories": {
+    "doc": "doc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nocobase-plugins-dumu/wangeditor-field.git"
+  },
+  "keywords": [
+    "nocobae",
+    "plugin",
+    "wangeditor",
+    "field"
+  ],
+  "author": "ytl003",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nocobase-plugins-dumu/wangeditor-field/issues"
+  },
+  "homepage": "https://github.com/nocobase-plugins-dumu/wangeditor-field#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }
