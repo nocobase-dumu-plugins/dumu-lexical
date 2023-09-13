@@ -7,6 +7,7 @@ import {
   useAPIClient,
 } from '@nocobase/client';
 import { connect, mapProps, mapReadPretty } from '@formily/react';
+import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor';
 import { Editor, Toolbar } from '@wangeditor/editor-for-react';
 
 import '@wangeditor/editor/dist/css/style.css';
@@ -18,10 +19,10 @@ const WangEditorCom = connect(
     if (disabled) {
       return <ReadPretty.Html {...props} />;
     }
-    const [editor, setEditor] = useState(null);
-    const toolbarConfig= {};
+    const [editor, setEditor] = useState<IDomEditor | null>(null);
+    const toolbarConfig: Partial<IToolbarConfig> = {};
     const api = useAPIClient();
-    const customUpload = async (file, insertFn) => {
+    const customUpload = async (file: File, insertFn: (url: string, alt?: string, href?: string) => void) => {
       const data = new FormData();
       data.append('file', file);
       const r = await api.request({
@@ -31,7 +32,7 @@ const WangEditorCom = connect(
       });
       insertFn(r.data.data.url);
     };
-    const editorConfig = {
+    const editorConfig: Partial<IEditorConfig> = {
       placeholder: '请输入内容...',
       MENU_CONF: {
         uploadImage: {
@@ -55,7 +56,7 @@ const WangEditorCom = connect(
     setTimeout(() => {
       canSave = true;
     }, 800);
-    const myChange = (editor) => {
+    const myChange = (editor: IDomEditor) => {
       const html = editor.getHtml();
       canSave && onChange(html);
     };
