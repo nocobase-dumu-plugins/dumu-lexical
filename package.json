@@ -1,5 +1,5 @@
 {
-  "name": "@nocobase/plugin-dumu-wangeditor-field",
+  "name": "@nocobase-plugins-dumu/wangeditor-field",
   "version": "0.13.0",
   "main": "dist/server/index.js",
   "displayName": "wangeditor 富文本字段插件",
