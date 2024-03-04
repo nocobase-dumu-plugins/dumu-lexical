@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import {
-  CollectionManagerProvider,
-  ReadPretty,
-  SchemaComponentOptions,
-  registerField,
-  useAPIClient,
-} from '@nocobase/client';
+import { ReadPretty, SchemaComponentOptions, useAPIClient } from '@nocobase/client';
 import { connect, mapProps, mapReadPretty } from '@formily/react';
 import { IDomEditor, IEditorConfig, IToolbarConfig } from '@wangeditor/editor';
 import { Editor, Toolbar } from '@wangeditor/editor-for-react';
 
 import '@wangeditor/editor/dist/css/style.css';
-import { WangEditor } from './wangeditor-formula';
 
 const WangEditorCom = connect(
   (props) => {
@@ -66,7 +59,7 @@ const WangEditorCom = connect(
           <Toolbar
             editor={editor}
             defaultConfig={toolbarConfig}
-            mode="default"
+            mode='default'
             style={{ borderBottom: '1px solid #ccc' }}
           />
           <Editor
@@ -74,7 +67,7 @@ const WangEditorCom = connect(
             value={value}
             onCreated={setEditor}
             onChange={myChange}
-            mode="default"
+            mode='default'
             style={{ height: '500px', overflowY: 'hidden' }}
           />
         </div>
@@ -93,19 +86,14 @@ const WangEditorCom = connect(
   }),
 );
 
-registerField(WangEditor.group, WangEditor.type, WangEditor);
 export const WangEditorProvider = (props) => {
   return (
-    <CollectionManagerProvider interfaces={{ WangEditor }}>
-      <SchemaComponentOptions
-        components={{
-          WangEditor: WangEditorCom,
-        }}
-      >
-        {props.children}
-      </SchemaComponentOptions>
-    </CollectionManagerProvider>
+    <SchemaComponentOptions
+      components={{
+        WangEditor: WangEditorCom,
+      }}
+    >
+      {props.children}
+    </SchemaComponentOptions>
   );
 };
-
-WangEditorProvider.displayName = 'WangEditorProvider';
